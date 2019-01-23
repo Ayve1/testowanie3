@@ -74,7 +74,7 @@ public class Product {
         this.producer = producer;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         if(this.producer != null)
             return "Product number: " + this.id + "\n"
@@ -85,5 +85,16 @@ public class Product {
                 + "Product name: " + this.name + "\n"
                 + "Product price: " + this.price + "\n"
                 + "No Producer data";
+    }*/
+
+    @Override
+    public String toString() {
+        String s = "Product[";
+        if(!this.name.equals(""))
+            s += this.name;
+        if(!(this.price == null))
+            s += ","+this.price;
+        s+= "]";
+        return s;
     }
 }
